@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | KYM Intelekt Resources</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ADMIN NAVBAR -->
+
+    <nav class="admin-navbar">
+
+        <div class="admin-logo">
+            KYM INTELEKT RESOURCES
+        </div>
+
+        <button
+            onclick="logout()"
+            class="logout-button">
+
+            Logout
+
+        </button>
+
+    </nav>
+
+
+    <!-- DASHBOARD -->
+
+    <section class="dashboard">
+
+        <div class="dashboard-heading">
+
+            <p>ADMIN PANEL</p>
+
+            <h1>Admin Dashboard</h1>
+
+            <span>
+                Manage and view customer enquiries.
+            </span>
+
+        </div>
+
+
+        <!-- SUMMARY -->
+
+        <div class="dashboard-cards">
+
+            <div class="dashboard-card">
+
+                <h3>Total Enquiries</h3>
+
+                <strong id="totalEnquiries">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <h3>Pending Enquiries</h3>
+
+                <strong id="pendingEnquiries">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <h3>Completed</h3>
+
+                <strong id="completedEnquiries">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- CUSTOMER ENQUIRIES -->
+
+        <div class="enquiry-table-section">
+
+            <h2>Customer Enquiries</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>No.</th>
+                            <th>Customer</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Location</th>
+                            <th>Furniture</th>
+                            <th>Budget</th>
+                            <th>Status</th>
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="enquiryTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+<script>
+
+// ============================
+// LOAD ENQUIRIES
+// ============================
+
+function loadEnquiries() {
+
+    const enquiries =
+        JSON.parse(
+            localStorage.getItem("enquiries")
+        ) || [];
+
+
+    // Total
+
+    document.getElementById(
+        "totalEnquiries"
+    ).innerText = enquiries.length;
+
+
+    // Pending
+
+    const pending =
+        enquiries.filter(
+            enquiry => enquiry.status === "Pending"
+        ).length;
+
+    document.getElementById(
+        "pendingEnquiries"
+    ).innerText = pending;
+
+
+    // Completed
+
+    const completed =
+        enquiries.filter(
+            enquiry => enquiry.status === "Completed"
+        ).length;
+
+    document.getElementById(
+        "completedEnquiries"
+    ).innerText = completed;
+
+
+    // Table
+
+    const table =
+        document.getElementById(
+            "enquiryTable"
+        );
+
+    table.innerHTML = "";
+
+
+    if (enquiries.length === 0) {
+
+        table.innerHTML = `
+            <tr>
+                <td colspan="9"
+                    style="text-align:center;">
+                    No customer enquiries yet.
+                </td>
+            </tr>
+        `;
+
+        return;
+    }
+
+
+    enquiries.forEach(function(enquiry, index) {
+
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+
+            <td>${index + 1}</td>
+
+            <td>${enquiry.name}</td>
+
+            <td>${enquiry.email}</td>
+
+            <td>${enquiry.phone}</td>
+
+            <td>${enquiry.location}</td>
+
+            <td>${enquiry.furniture}</td>
+
+            <td>${enquiry.budget}</td>
+
+            <td>
+
+                <select
+                    onchange="updateStatus(${index}, this.value)">
+
+                    <option
+                        value="Pending"
+                        ${enquiry.status === "Pending" ? "selected" : ""}>
+
+                        Pending
+
+                    </option>
+
+                    <option
+                        value="Contacted"
+                        ${enquiry.status === "Contacted" ? "selected" : ""}>
+
+                        Contacted
+
+                    </option>
+
+                    <option
+                        value="Completed"
+                        ${enquiry.status === "Completed" ? "selected" : ""}>
+
+                        Completed
+
+                    </option>
+
+                </select>
+
+            </td>
+
+            <td>
+
+                <button
+                    class="view-button"
+                    onclick="viewEnquiry(${index})">
+
+                    View
+
+                </button>
+
+                <button
+                    class="delete-button"
+                    onclick="deleteEnquiry(${index})">
+
+                    Delete
+
+                </button>
+
+            </td>
+
+        `;
+
+        table.appendChild(row);
+
+    });
+
+}
+
+
+// ============================
+// VIEW ENQUIRY
+// ============================
+
+function viewEnquiry(index) {
+
+    const enquiries =
+        JSON.parse(
+            localStorage.getItem("enquiries")
+        ) || [];
+
+    const enquiry = enquiries[index];
+
+
+    alert(
+
+        "CUSTOMER ENQUIRY\n\n" +
+
+        "Name: " + enquiry.name + "\n" +
+
+        "Email: " + enquiry.email + "\n" +
+
+        "Phone: " + enquiry.phone + "\n" +
+
+        "Location: " + enquiry.location + "\n" +
+
+        "Budget: " + enquiry.budget + "\n" +
+
+        "Furniture: " + enquiry.furniture + "\n\n" +
+
+        "Message: " + enquiry.message + "\n\n" +
+
+        "Submitted: " + enquiry.date
+
+    );
+
+}
+
+
+// ============================
+// UPDATE STATUS
+// ============================
+
+function updateStatus(index, status) {
+
+    let enquiries =
+        JSON.parse(
+            localStorage.getItem("enquiries")
+        ) || [];
+
+
+    enquiries[index].status = status;
+
+
+    localStorage.setItem(
+        "enquiries",
+        JSON.stringify(enquiries)
+    );
+
+
+    loadEnquiries();
+
+}
+
+
+// ============================
+// DELETE ENQUIRY
+// ============================
+
+function deleteEnquiry(index) {
+
+    if (
+        confirm(
+            "Are you sure you want to delete this enquiry?"
+        )
+    ) {
+
+        let enquiries =
+            JSON.parse(
+                localStorage.getItem("enquiries")
+            ) || [];
+
+
+        enquiries.splice(index, 1);
+
+
+        localStorage.setItem(
+            "enquiries",
+            JSON.stringify(enquiries)
+        );
+
+
+        loadEnquiries();
+
+    }
+
+}
+
+
+// ============================
+// LOGOUT
+// ============================
+
+function logout() {
+
+    window.location.href =
+        "admin-login.html";
+
+}
+
+
+// LOAD DATA
+
+loadEnquiries();
+
+</script>
+
+</body>
+
+</html>

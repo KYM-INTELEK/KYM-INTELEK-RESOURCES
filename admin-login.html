@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | KYM Intelekt Resources</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="admin-login-page">
+
+        <div class="admin-login-box">
+
+            <div class="admin-icon">
+                🔐
+            </div>
+
+            <h1>Admin Login</h1>
+
+            <p>
+                KYM Intelekt Resources
+            </p>
+
+            <form id="adminLoginForm">
+
+                <div class="form-group">
+
+                    <label>Username</label>
+
+                    <input
+                        type="text"
+                        id="adminUsername"
+                        placeholder="Enter username"
+                        required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Password</label>
+
+                    <input
+                        type="password"
+                        id="adminPassword"
+                        placeholder="Enter password"
+                        required>
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="admin-login-submit">
+
+                    Login
+
+                </button>
+
+                <p id="loginMessage"></p>
+
+            </form>
+
+            <a href="index.html"
+               class="back-home">
+
+                ← Back to Website
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        document
+        .getElementById("adminLoginForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const username =
+                document.getElementById("adminUsername").value;
+
+            const password =
+                document.getElementById("adminPassword").value;
+
+            /*
+             * DEMO LOGIN
+             * Untuk prototype FYP sahaja.
+             */
+
+            if (
+                username === "admin" &&
+                password === "admin123"
+            ) {
+
+                window.location.href =
+                    "admin-dashboard.html";
+
+            } else {
+
+                document
+                .getElementById("loginMessage")
+                .innerText =
+                    "Invalid username or password.";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
