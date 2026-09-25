@@ -515,3 +515,228 @@ function handleSwipe() {
     }
 
 }
+
+/* ================= PORTFOLIO PROJECTS ================= */
+
+const projects = [
+
+    {
+        image: "images/kitchen/kitchen1.jpg",
+        category: "KITCHEN CABINET",
+        title: "Modern Kitchen",
+        type: "Kitchen Cabinet",
+        design: "Modern Custom Design",
+        description:
+            "A modern custom kitchen cabinet designed to provide a practical, comfortable and stylish space for everyday living."
+    },
+
+    {
+        image: "images/wardrobe/wardrobe1.jpg",
+        category: "WARDROBE",
+        title: "Modern Wardrobe",
+        type: "Custom Wardrobe",
+        design: "Modern Storage Design",
+        description:
+            "A practical custom wardrobe designed to maximize storage space while maintaining a clean and modern appearance."
+    },
+
+    {
+        image: "images/tv/tv1.jpg",
+        category: "TV CABINET",
+        title: "Modern TV Cabinet",
+        type: "TV Cabinet",
+        design: "Modern Living Room Design",
+        description:
+            "A stylish TV cabinet designed to complement the living room while providing practical storage."
+    },
+
+    {
+        image: "images/shoes/shoes1.jpg",
+        category: "SHOES CABINET",
+        title: "Modern Shoes Cabinet",
+        type: "Shoes Cabinet",
+        design: "Space-Saving Design",
+        description:
+            "A practical shoes cabinet designed to keep the entrance organized while making efficient use of available space."
+    }
+
+];
+
+
+let currentProject = 0;
+
+
+/* OPEN PROJECT */
+
+function openProject(index) {
+
+    currentProject = index;
+
+    updateProject();
+
+    const modal =
+        document.getElementById("projectModal");
+
+    modal.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+/* CLOSE PROJECT */
+
+function closeProject() {
+
+    const modal =
+        document.getElementById("projectModal");
+
+    modal.classList.remove("active");
+
+    document.body.style.overflow = "auto";
+}
+
+
+/* UPDATE PROJECT */
+
+function updateProject() {
+
+    const project =
+        projects[currentProject];
+
+
+    document.getElementById(
+        "projectModalImage"
+    ).src = project.image;
+
+
+    document.getElementById(
+        "projectCategory"
+    ).textContent = project.category;
+
+
+    document.getElementById(
+        "projectTitle"
+    ).textContent = project.title;
+
+
+    document.getElementById(
+        "projectDescription"
+    ).textContent = project.description;
+
+
+    document.getElementById(
+        "projectType"
+    ).textContent = project.type;
+
+
+    document.getElementById(
+        "projectDesign"
+    ).textContent = project.design;
+
+
+    document.getElementById(
+        "projectCounter"
+    ).textContent =
+        (currentProject + 1) +
+        " / " +
+        projects.length;
+
+}
+
+
+/* NEXT PROJECT */
+
+function nextProject() {
+
+    currentProject++;
+
+    if (currentProject >= projects.length) {
+
+        currentProject = 0;
+
+    }
+
+    updateProject();
+
+}
+
+
+/* PREVIOUS PROJECT */
+
+function previousProject() {
+
+    currentProject--;
+
+    if (currentProject < 0) {
+
+        currentProject =
+            projects.length - 1;
+
+    }
+
+    updateProject();
+
+}
+
+
+/* CLOSE WHEN CLICK OUTSIDE */
+
+document.addEventListener(
+    "click",
+    function(event) {
+
+        const modal =
+            document.getElementById("projectModal");
+
+
+        if (event.target === modal) {
+
+            closeProject();
+
+        }
+
+    }
+);
+
+
+/* ESC KEY */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        const modal =
+            document.getElementById("projectModal");
+
+
+        if (
+            !modal.classList.contains("active")
+        ) {
+
+            return;
+
+        }
+
+
+        if (event.key === "Escape") {
+
+            closeProject();
+
+        }
+
+
+        if (event.key === "ArrowRight") {
+
+            nextProject();
+
+        }
+
+
+        if (event.key === "ArrowLeft") {
+
+            previousProject();
+
+        }
+
+    }
+);

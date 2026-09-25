@@ -255,7 +255,7 @@
                 <div class="service-image">
 
                     <img
-                        src="images/shoes/shoes1.jpg"
+                        src="images/shoes/WhatsApp Image 2026-09-23 at 10.23.14 PM 8.jpeg"
                         alt="Shoes Cabinet">
 
                 </div>
@@ -372,95 +372,501 @@
 
     </div>
 
+<!-- ================= PORTFOLIO ================= -->
 
-    <!-- ================= PORTFOLIO ================= -->
+<section class="portfolio" id="portfolio">
 
-    <section class="portfolio" id="portfolio">
+    <div class="section-heading">
 
-        <div class="section-heading">
+        <p>OUR PORTFOLIO</p>
 
-            <p>
-                OUR WORK
-            </p>
+        <h2>Our Recent Projects</h2>
 
-            <h2>
-                Recent Projects
-            </h2>
+        <span>
+            Discover some of our custom furniture projects
+            designed for modern and comfortable homes.
+        </span>
 
-            <span>
-                Take a look at some of our furniture projects.
+    </div>
+
+
+    <div class="portfolio-grid">
+
+
+        <!-- PROJECT 1 - KITCHEN -->
+
+        <div class="portfolio-card">
+
+            <div class="portfolio-image">
+
+                <img
+                    src="images/shoes/keje.jpeg"
+                    alt="Modern Kitchen Cabinet">
+
+                <div class="portfolio-overlay">
+
+                    <button
+                        onclick="openProject(0)">
+                        View Project →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="portfolio-info">
+
+                <span>
+                    KITCHEN CABINET
+                </span>
+
+                <h3>
+                    Modern Kitchen
+                </h3>
+
+                <p>
+                    Custom kitchen cabinet designed
+                    for a modern and functional home.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PROJECT 2 - WARDROBE -->
+
+        <div class="portfolio-card">
+
+            <div class="portfolio-image">
+
+                <img
+                    src="images/wardrobe/keje wardrobe new.png"
+                    alt="Modern Wardrobe">
+
+                <div class="portfolio-overlay">
+
+                    <button
+                        onclick="openProject(1)">
+                        View Project →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="portfolio-info">
+
+                <span>
+                    WARDROBE
+                </span>
+
+                <h3>
+                    Modern Wardrobe
+                </h3>
+
+                <p>
+                    Practical wardrobe solutions
+                    designed according to your space.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PROJECT 3 - TV CABINET -->
+
+        <div class="portfolio-card">
+
+            <div class="portfolio-image">
+
+                <img
+                    src="images/tv/keje tv new.png"
+                    alt="Modern TV Cabinet">
+
+                <div class="portfolio-overlay">
+
+                    <button
+                        onclick="openProject(2)">
+                        View Project →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="portfolio-info">
+
+                <span>
+                    TV CABINET
+                </span>
+
+                <h3>
+                    Modern TV Cabinet
+                </h3>
+
+                <p>
+                    Stylish TV cabinet designed to
+                    complement your living room.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PROJECT 4 - SHOES CABINET -->
+
+        <div class="portfolio-card">
+
+            <div class="portfolio-image">
+
+                <img
+                    src="images/shoes/keje kasut.png"
+                    alt="Modern Shoes Cabinet">
+
+                <div class="portfolio-overlay">
+
+                    <button
+                        onclick="openProject(3)">
+                        View Project →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="portfolio-info">
+
+                <span>
+                    SHOES CABINET
+                </span>
+
+                <h3>
+                    Modern Shoes Cabinet
+                </h3>
+
+                <p>
+                    Space-saving cabinet designed
+                    for a clean and organized entrance.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- PORTFOLIO CTA -->
+
+    <div class="portfolio-cta">
+
+        <h3>
+            Looking for Custom Furniture?
+        </h3>
+
+        <p>
+            Let's create furniture that fits your
+            home, style and needs.
+        </p>
+
+        <a href="#enquiry">
+            Get Your Quote →
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PROJECT POPUP ================= -->
+
+<div
+    id="projectModal"
+    class="project-modal">
+
+
+    <div class="project-modal-box">
+
+
+        <!-- CLOSE -->
+
+        <button
+            class="project-close"
+            onclick="closeProject()">
+
+            &times;
+
+        </button>
+
+
+        <!-- IMAGE -->
+
+        <div class="project-modal-image">
+
+            <img
+                id="projectModalImage"
+                src=""
+                alt="Project">
+
+        </div>
+
+
+        <!-- DETAILS -->
+
+        <div class="project-modal-content">
+
+            <span id="projectCategory">
+                KITCHEN CABINET
             </span>
 
-        </div>
+            <h2 id="projectTitle">
+                Modern Kitchen
+            </h2>
+
+            <p id="projectDescription">
+                Custom kitchen cabinet designed
+                for a modern and functional home.
+            </p>
 
 
-        <div class="portfolio-grid">
-
-            <div class="portfolio-item">
-
-                <img
-                    src="images/kitchen.jpg"
-                    alt="Kitchen Project">
+            <div class="project-details">
 
                 <div>
 
-                    <h3>
-                        Modern Kitchen
-                    </h3>
+                    <strong>
+                        Project Type
+                    </strong>
 
-                    <p>
+                    <span id="projectType">
                         Kitchen Cabinet
-                    </p>
+                    </span>
 
                 </div>
 
-            </div>
-
-
-            <div class="portfolio-item">
-
-                <img
-                    src="images/wardrobe.jpg"
-                    alt="Wardrobe Project">
 
                 <div>
 
-                    <h3>
-                        Modern Wardrobe
-                    </h3>
+                    <strong>
+                        Design
+                    </strong>
 
-                    <p>
-                        Custom Wardrobe
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="portfolio-item">
-
-                <img
-                    src="images/tv-cabinet.jpg"
-                    alt="TV Cabinet">
-
-                <div>
-
-                    <h3>
-                        TV Cabinet
-                    </h3>
-
-                    <p>
-                        Living Room
-                    </p>
+                    <span id="projectDesign">
+                        Modern Custom Design
+                    </span>
 
                 </div>
 
             </div>
+
+
+            <!-- NAVIGATION -->
+
+            <div class="project-navigation">
+
+                <button
+                    onclick="previousProject()">
+
+                    ← Previous
+
+                </button>
+
+
+                <span id="projectCounter">
+                    1 / 4
+                </span>
+
+
+                <button
+                    onclick="nextProject()">
+
+                    Next →
+
+                </button>
+
+            </div>
+
 
         </div>
 
-    </section>
+    </div>
+
+</div>
+
+<!-- ================= OUR WORK ================= -->
+
+<section class="our-work" id="portfolio">
+
+    <div class="section-heading">
+
+        <p>OUR WORK</p>
+
+        <h2>How We Turn Your Ideas Into Reality</h2>
+
+        <span>
+            From your first idea to the final installation,
+            we make every step simple and professional.
+        </span>
+
+    </div>
+
+
+    <div class="work-process">
+
+
+        <!-- STEP 01 -->
+
+        <div class="process-card">
+
+            <div class="process-number">
+                01
+            </div>
+
+            <div class="process-icon">
+                💬
+            </div>
+
+            <h3>
+                Consultation
+            </h3>
+
+            <p>
+                Tell us about your furniture needs,
+                ideas and preferred design.
+            </p>
+
+        </div>
+
+
+        <!-- STEP 02 -->
+
+        <div class="process-card">
+
+            <div class="process-number">
+                02
+            </div>
+
+            <div class="process-icon">
+                ✏️
+            </div>
+
+            <h3>
+                Design
+            </h3>
+
+            <p>
+                We create a suitable design based
+                on your style, needs and space.
+            </p>
+
+        </div>
+
+
+        <!-- STEP 03 -->
+
+        <div class="process-card">
+
+            <div class="process-number">
+                03
+            </div>
+
+            <div class="process-icon">
+                📏
+            </div>
+
+            <h3>
+                Measurement
+            </h3>
+
+            <p>
+                We measure the available space to
+                ensure the furniture fits properly.
+            </p>
+
+        </div>
+
+
+        <!-- STEP 04 -->
+
+        <div class="process-card">
+
+            <div class="process-number">
+                04
+            </div>
+
+            <div class="process-icon">
+                🔨
+            </div>
+
+            <h3>
+                Production
+            </h3>
+
+            <p>
+                Your customized furniture is carefully
+                produced according to the agreed design.
+            </p>
+
+        </div>
+
+
+        <!-- STEP 05 -->
+
+        <div class="process-card">
+
+            <div class="process-number">
+                05
+            </div>
+
+            <div class="process-icon">
+                🏠
+            </div>
+
+            <h3>
+                Installation
+            </h3>
+
+            <p>
+                Our team installs and completes your
+                furniture at your home.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- CALL TO ACTION -->
+
+    <div class="work-cta">
+
+        <h3>
+            Have an Idea for Your Home?
+        </h3>
+
+        <p>
+            Let's turn your idea into custom furniture.
+        </p>
+
+        <a href="#enquiry">
+            Get Your Quote →
+        </a>
+
+    </div>
+
+</section>
 
 
     <!-- ================= ENQUIRY ================= -->
@@ -875,7 +1281,7 @@
 
 
         <a
-            href="https://wa.me/60123456789"
+            href="https://wa.me/60126148498"
             target="_blank">
 
             Contact Us

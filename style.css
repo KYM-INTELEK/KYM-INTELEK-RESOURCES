@@ -2161,3 +2161,894 @@ table select {
     }
 
 }
+
+/* ================= OUR WORK ================= */
+
+.our-work {
+    padding: 100px 8%;
+    background: #f8fafc;
+}
+
+
+/* SECTION HEADING */
+
+.our-work .section-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.our-work .section-heading p {
+    color: #1769aa;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.our-work .section-heading h2 {
+    font-size: 38px;
+    color: #172a46;
+    margin-bottom: 15px;
+}
+
+.our-work .section-heading span {
+    color: #666;
+    font-size: 16px;
+}
+
+
+/* PROCESS CONTAINER */
+
+.work-process {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 20px;
+}
+
+
+/* PROCESS CARD */
+
+.process-card {
+    position: relative;
+
+    background: white;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition: all 0.3s ease;
+
+    border: 1px solid #edf0f5;
+}
+
+
+/* HOVER */
+
+.process-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.13);
+
+}
+
+
+/* NUMBER */
+
+.process-number {
+
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #1769aa;
+
+}
+
+
+/* ICON */
+
+.process-icon {
+
+    width: 65px;
+    height: 65px;
+
+    margin: 10px auto 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf4ff;
+
+    border-radius: 50%;
+
+    font-size: 28px;
+
+}
+
+
+/* TITLE */
+
+.process-card h3 {
+
+    font-size: 20px;
+
+    color: #172a46;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* DESCRIPTION */
+
+.process-card p {
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #666;
+
+    margin: 0;
+
+}
+
+
+/* CTA */
+
+.work-cta {
+
+    max-width: 800px;
+
+    margin: 60px auto 0;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    background: #172a46;
+
+    border-radius: 18px;
+
+    color: white;
+
+}
+
+
+.work-cta h3 {
+
+    font-size: 28px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.work-cta p {
+
+    font-size: 16px;
+
+    margin-bottom: 25px;
+
+    opacity: 0.9;
+
+}
+
+
+.work-cta a {
+
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    background: white;
+
+    color: #172a46;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+
+.work-cta a:hover {
+
+    background: #1769aa;
+
+    color: white;
+
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    .work-process {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .our-work {
+
+        padding: 70px 5%;
+
+    }
+
+
+    .our-work .section-heading h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .work-process {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .process-card {
+
+        padding: 30px 25px;
+
+    }
+
+
+    .work-cta h3 {
+
+        font-size: 24px;
+
+    }
+
+}
+
+/* ================= PORTFOLIO ================= */
+
+.portfolio {
+    padding: 100px 8%;
+    background: #ffffff;
+}
+
+
+/* HEADING */
+
+.portfolio .section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.portfolio .section-heading p {
+    color: #1769aa;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.portfolio .section-heading h2 {
+    color: #172a46;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.portfolio .section-heading span {
+    color: #666;
+    font-size: 16px;
+}
+
+
+/* GRID */
+
+.portfolio-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+
+/* CARD */
+
+.portfolio-card {
+
+    background: #ffffff;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    border: 1px solid #e8edf3;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s ease;
+
+}
+
+
+.portfolio-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
+
+}
+
+
+/* IMAGE */
+
+.portfolio-image {
+
+    position: relative;
+
+    height: 280px;
+
+    overflow: hidden;
+
+}
+
+
+.portfolio-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+
+}
+
+
+.portfolio-card:hover
+.portfolio-image img {
+
+    transform: scale(1.08);
+
+}
+
+
+/* OVERLAY */
+
+.portfolio-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(23, 42, 70, 0.72);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    opacity: 0;
+
+    transition: 0.3s ease;
+
+}
+
+
+.portfolio-card:hover
+.portfolio-overlay {
+
+    opacity: 1;
+
+}
+
+
+/* VIEW PROJECT BUTTON */
+
+.portfolio-overlay button {
+
+    padding: 13px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #172a46;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.portfolio-overlay button:hover {
+
+    background: #1769aa;
+
+    color: white;
+
+}
+
+
+/* INFORMATION */
+
+.portfolio-info {
+
+    padding: 25px;
+
+}
+
+
+.portfolio-info span {
+
+    color: #1769aa;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.portfolio-info h3 {
+
+    margin: 8px 0;
+
+    color: #172a46;
+
+    font-size: 23px;
+
+}
+
+
+.portfolio-info p {
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin: 0;
+
+}
+
+
+/* CTA */
+
+.portfolio-cta {
+
+    max-width: 800px;
+
+    margin: 60px auto 0;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    background: #172a46;
+
+    border-radius: 18px;
+
+    color: white;
+
+}
+
+
+.portfolio-cta h3 {
+
+    font-size: 27px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.portfolio-cta p {
+
+    font-size: 15px;
+
+    margin-bottom: 25px;
+
+    opacity: 0.9;
+
+}
+
+
+.portfolio-cta a {
+
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    background: white;
+
+    color: #172a46;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+
+.portfolio-cta a:hover {
+
+    background: #1769aa;
+
+    color: white;
+
+}
+
+
+/* ================= PROJECT MODAL ================= */
+
+.project-modal {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    background:
+        rgba(0, 0, 0, 0.78);
+
+    padding: 30px;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.project-modal.active {
+
+    display: flex;
+
+}
+
+
+.project-modal-box {
+
+    position: relative;
+
+    width: 900px;
+
+    max-width: 95%;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.3);
+
+}
+
+
+/* MODAL IMAGE */
+
+.project-modal-image {
+
+    min-height: 450px;
+
+}
+
+
+.project-modal-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+/* MODAL CONTENT */
+
+.project-modal-content {
+
+    padding: 45px 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.project-modal-content > span {
+
+    color: #1769aa;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.project-modal-content h2 {
+
+    color: #172a46;
+
+    font-size: 32px;
+
+    margin: 10px 0 15px;
+
+}
+
+
+.project-modal-content > p {
+
+    color: #666;
+
+    line-height: 1.7;
+
+}
+
+
+/* DETAILS */
+
+.project-details {
+
+    margin-top: 25px;
+
+    display: grid;
+
+    gap: 15px;
+
+}
+
+
+.project-details div {
+
+    padding: 15px;
+
+    background: #f5f8fc;
+
+    border-radius: 8px;
+
+}
+
+
+.project-details strong {
+
+    display: block;
+
+    color: #172a46;
+
+    font-size: 13px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.project-details span {
+
+    color: #666;
+
+    font-size: 14px;
+
+}
+
+
+/* CLOSE */
+
+.project-close {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #172a46;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.15);
+
+}
+
+
+.project-close:hover {
+
+    background: #1769aa;
+
+    color: white;
+
+}
+
+
+/* NAVIGATION */
+
+.project-navigation {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 30px;
+
+}
+
+
+.project-navigation button {
+
+    border: none;
+
+    background: #172a46;
+
+    color: white;
+
+    padding: 10px 16px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+}
+
+
+.project-navigation button:hover {
+
+    background: #1769aa;
+
+}
+
+
+.project-navigation span {
+
+    color: #666;
+
+    font-size: 14px;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .portfolio {
+
+        padding: 70px 5%;
+
+    }
+
+
+    .portfolio-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .portfolio-image {
+
+        height: 240px;
+
+    }
+
+
+    .project-modal-box {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .project-modal-image {
+
+        min-height: 250px;
+
+        height: 250px;
+
+    }
+
+
+    .project-modal-content {
+
+        padding: 30px 25px;
+
+    }
+
+
+    .project-modal-content h2 {
+
+        font-size: 26px;
+
+    }
+
+}
