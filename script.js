@@ -541,7 +541,7 @@ const projects = [
     },
 
     {
-        image: "images/tv/tv 1.jp g",
+        image: "images/tv/tv 1.jpeg",
         category: "TV CABINET",
         title: "Modern TV Cabinet",
         type: "TV Cabinet",
