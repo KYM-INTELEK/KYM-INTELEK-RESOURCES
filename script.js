@@ -521,7 +521,7 @@ function handleSwipe() {
 const projects = [
 
     {
-        image: "images/kitchen/kitchen1.jpg",
+        image: "images/kitchen/WhatsApp Image 2026-09-17 at 11.16.59 AM.jpeg",
         category: "KITCHEN CABINET",
         title: "Modern Kitchen",
         type: "Kitchen Cabinet",
@@ -531,7 +531,7 @@ const projects = [
     },
 
     {
-        image: "images/wardrobe/wardrobe1.jpg",
+        image: "images/wardrobe/gambar 22.jpeg",
         category: "WARDROBE",
         title: "Modern Wardrobe",
         type: "Custom Wardrobe",
@@ -541,7 +541,7 @@ const projects = [
     },
 
     {
-        image: "images/tv/tv1.jpg",
+        image: "images/tv/tv 1.jp g",
         category: "TV CABINET",
         title: "Modern TV Cabinet",
         type: "TV Cabinet",
@@ -551,7 +551,7 @@ const projects = [
     },
 
     {
-        image: "images/shoes/shoes1.jpg",
+        image: "images/shoes/shoes23.jpeg",
         category: "SHOES CABINET",
         title: "Modern Shoes Cabinet",
         type: "Shoes Cabinet",
